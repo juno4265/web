@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://superkts.com/css/common_css.css">
+<link rel="stylesheet" type="text/css" href="http://superkts.com/css/jquery.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+<style type="text/css">
+    .css_test {
+        border : 5px solid silver;
+        margin-top : 100px;
+        padding : 5px;
+        text-align : center;
+    }
+    .css_test .dogbox {
+        border-radius : 5px;
+        border : 5px solid gray;
+        display : inline-block;
+        padding : 5px;
+    }
+    .css_test .new { /* 새로 추가되는 이미지에 사용할 CSS */
+        position : relative;
+        top : -150px;
+        z-index : 10;
+    }
+</style>
+
+<script type="text/javascript">
+    // 랜덤으로 이미지 주소 만들기
+    function j_test_get_img(){
+        var img = [
+            'http://superkts.com/img/css/huk.gif',
+            'http://superkts.com/img/css/dog021.gif',
+            'http://superkts.com/img/css/dog060.gif',
+            'http://superkts.com/img/css/dog061.gif',
+            'http://superkts.com/img/css/bird20.gif',
+            'http://superkts.com/img/css/bird21.gif',
+            'http://superkts.com/img/css/bird27.gif',
+            'http://superkts.com/img/css/bird28.gif',
+            'http://superkts.com/img/css/bird34.gif'
+        ];
+        var rnd = Math.floor(Math.random() * img.length);
+        return img[rnd];
+    }
+
+    // before
+    function j_test_before(){
+        $('.css_test .dogbox').before('<img class="new" src="' + j_test_get_img() + '" />');
+        $('.css_test .dogbox').prev().animate({top:0}, 1000, 'easeOutBounce');
+    }
+
+    // after
+    function j_test_after(){
+        $('.css_test .dogbox').after('<img class="new" src="' + j_test_get_img() + '" />');
+        $('.css_test .dogbox').next().animate({top:0}, 1000, 'easeOutBounce');
+    }
+
+    // append
+    function j_test_append(){
+        $('.css_test .dogbox').append('<img class="new" src="' + j_test_get_img() + '" />');
+        $('.css_test .dogbox img:last').animate({top:0}, 1000, 'easeOutBounce');
+    }
+
+    // prepend
+    function j_test_prepend(){
+        $('.css_test .dogbox').prepend('<img class="new" src="' + j_test_get_img() + '" />');
+        $('.css_test .dogbox img:first').animate({top:0}, 1000, 'easeOutBounce');
+    }
+
+    // 처음 가운데 개만 남기고 전부 삭제
+    function j_test_remove(){
+        $('.css_test img:not([name=IDDQD])').animate({top:'-=300', opacity:0}, 1000, function(){
+            $(this).remove();
+        });
+    }
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<button type="button" onclick="j_test_before()">before</button>
+<button type="button" onclick="j_test_prepend()">prepend</button>
+<button type="button" onclick="j_test_append()">append</button>
+<button type="button" onclick="j_test_after()">after</button>
+<button type="button" onclick="j_test_remove()">다 사라졌으면 좋겠다 !!</button>
+<br>
+<div class="css_test">
+    <div class="dogbox"><img name="IDDQD" src="http://superkts.com/img/css/dog061.gif" /></div>
+</div>
+</body>
+</html>
+
