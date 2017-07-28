@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style type="text/css">
+	div.out {
+		width: 200px;
+		height: 60px;
+		background-color: yellow;	
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="out">
+		<p>마우스을 움직이세요</p>
+		<p>0</p>
+		<script type="text/javascript">
+			var i=0;
+			$("div.out").mouseover(function(){
+				$("p:first",this).text("mouse over");
+				$("p:last",this).text(++i);
+		});
+			
+		</script>
+</body>
+</html>

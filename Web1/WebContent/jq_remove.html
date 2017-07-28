@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+ p{ background-color: yellow;}
+ .contrainer { height: 80px; width: 200px; border: 1px dootted red;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#button1").click(function() {
+			$(".container").remove();
+		});
+		$("#button2").click(function() {
+			$(".container").empty();
+		});
+	});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<button id="button1">remove()</button>
+<button id="button2">empty()</button><br />
+<div class="container">
+<p class="hello">Hello</p>
+<p class="goodbye">GoodBye</p>
+</div>
+<br>
+</body>
+</html>

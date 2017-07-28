@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#fadeIn").click(function() {
+		$("#dog").fadeIn("slow");
+	});
+	$("#fadeOut").click(function () {
+		$("#dog").fadeOut("slow");
+	});
+});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<button id="fadeIn">fadeIn()</button>
+	<button id="fadeOut">fadeIn()</button><br/>
+	<img id="dog" src="http://pngimg.com/uploads/dog/dog_PNG23603.png" alt="" width="120" height="100" style="display: none; position: relative;"/>
+</body>
+</html>

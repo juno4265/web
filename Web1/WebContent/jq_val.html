@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#text").click(function() {
+			alert($("#target").val());
+		});
+	});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+ 	이름 : <input type="text" id="target" value=""><br/>
+ 	<button id="text">val()</button>
+</body>
+</html>

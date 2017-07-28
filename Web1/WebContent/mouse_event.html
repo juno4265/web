@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style type="text/css">
+	body {
+	background-color: #eef;
+}
+	div {
+	padding: 20px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<div id="log"></div>
+<script type="text/javascript">
+	$(document).mousemove(function (e) {
+		$("#log").text("e.pageX:"+e.pageX+",e.pageY:"+e.pageY);
+		
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+AJax는 Asynchronous JavaScript and XML 의 약자 입니다.
+Ajax는 동적인 대화영 웹 페이지를 만듭니다.

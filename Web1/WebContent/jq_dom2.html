@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).click(function() {
+		$("#text").click(function() {
+			$("#target").text("안녕하세요");
+		});
+		$("#html").click(function() {
+			$("#target").html("<b>안녕하세요?</b>");			
+		});
+	});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="target">이것은 <strong>하나의</strong><strong>단락입니다.</strong>
+	<button id="text">text()</button>
+	<button id="html">html()</button>
+</body>
+</html>

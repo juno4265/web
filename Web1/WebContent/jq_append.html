@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#button1").click(function() {
+			$("p").append("<b style='color:red'>Hello! </b>.");
+		});
+		$("#button2").click(function() {
+			$("p").prepend("<b style='color:red'>Hello! </b>.");
+		});
+	});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<p>I Would like to say: </p>
+<button id="button1">append()</button>
+<button id="button2">prepend()</button>
+</body>
+</html>
